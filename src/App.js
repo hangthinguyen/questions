@@ -31,14 +31,15 @@ function App() {
       setToggle({
         [Id]: !toggle[Id],
       });
+      console.log([Id], !toggle[Id]);
     },
     [toggle]
   );
 
   return (
-    <div className="App">
-      <h2>General Questions</h2>
-      <div className="questions-container">
+    <div className="flex flex-col items-center gap-y-14 p-60 bg-sky-100">
+      <h2 className="text-3xl font-bold">General Questions</h2>
+      <div className="flex flex-col gap-y-6 w-96">
         {questions.map((question) => (
           <Question
             id={question.id}
